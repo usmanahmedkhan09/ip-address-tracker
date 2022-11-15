@@ -11,12 +11,36 @@
 }
 
 html{
-    font-size: 62.5%;
+  font-size: 62.5%;
+  height: 100vh;
 }
 
 body {
-    min-height: 100vh;
+    height: 100%;
     font-size: 1.6rem;
     font-family: 'Rubik', sans-serif;
-    background-color: $dark-gray
+}
+  
+#app{
+  height: 100%;
+  width: 100%;
+}
+  
+.container {
+  height: 100%;
+  // background-color: $dark-gray;
+  display: flex;
+  flex-direction: column;
+
+  .search_wrapper{
+    min-height: 35%;
+    background-image: url('../images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .map_wrapper{
+    min-height: calc(100% - 35%);
+  }
 }
