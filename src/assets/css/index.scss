@@ -1,0 +1,22 @@
+@use 'util' as *;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Rubik', sans-serif;
+    background-color: $dark-gray
+}
