@@ -28,19 +28,54 @@ body {
   
 .container {
   height: 100%;
-  // background-color: $dark-gray;
   display: flex;
   flex-direction: column;
 
-  .search_wrapper{
-    min-height: 35%;
+  .search_container{
+    min-height: 30%;
     background-image: url('../images/pattern-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+
+    .title {
+      font-weight: 300;
+      color: white;
+    }
+    .search_wrapper {
+      display: flex;
+      margin : 16px 0px;
+      input {
+        min-height: 60px;
+        width: 500px;
+        border-radius: 10px 0px 0px 10px;
+        font-size: $font-xx;
+        border: unset;
+        padding: 0px 16px;
+
+        &:focus{
+          outline: none;
+          border: unset;
+        }
+      }
+      .icon_wrapper {
+        min-height: 60px;
+        min-width: 40px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        border-radius: 0px 10px 10px 0px;
+      }
+    }
   }
 
-  .map_wrapper{
-    min-height: calc(100% - 35%);
+  .map_container{
+    min-height: calc(100% - 30%);
   }
+
 }
