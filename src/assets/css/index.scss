@@ -76,6 +76,9 @@ body {
 
   .map_container{
     min-height: calc(100% - 30%);
+    .map_wrapper{
+      height: 100%;
+    }
   }
 
 }
