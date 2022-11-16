@@ -51,9 +51,9 @@ body {
       margin : 32px 0px;
 
       .search{
-        
+
         display: flex;
-        margin-top: 16px;
+        margin-top: 24px;
         input {
           min-height: 60px;
           width: 500px;
@@ -91,9 +91,10 @@ body {
   .ipInfo{
     width: 80%;
     min-height: 200px;
-    margin: 82px auto;
+    margin: 0px auto;
     background-color: white;
     border-radius: 20px;
+    z-index: 999999;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
