@@ -37,28 +37,35 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    display: grid;
-    place-content: center;
-    text-align: center;
 
     .title {
       font-weight: 300;
       color: white;
     }
+
     .search_wrapper {
       display: flex;
-      margin : 16px 0px;
-      input {
-        min-height: 60px;
-        width: 500px;
-        border-radius: 10px 0px 0px 10px;
-        font-size: $font-xx;
-        border: unset;
-        padding: 0px 16px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin : 32px 0px;
 
-        &:focus{
-          outline: none;
+      .search{
+        
+        display: flex;
+        margin-top: 16px;
+        input {
+          min-height: 60px;
+          width: 500px;
+          border-radius: 10px 0px 0px 10px;
+          font-size: $font-xx;
           border: unset;
+          padding: 0px 16px;
+  
+          &:focus{
+            outline: none;
+            border: unset;
+          }
         }
       }
       .icon_wrapper {
@@ -79,6 +86,22 @@ body {
     .map_wrapper{
       height: 100%;
     }
+  }
+
+  .ipInfo{
+    width: 80%;
+    min-height: 200px;
+    margin: 82px auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
   }
 
 }

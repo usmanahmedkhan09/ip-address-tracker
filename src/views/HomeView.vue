@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="search_container">
-      <h1 class="title">IP Address Tracker</h1>
       <Search></Search>
+      <IpInfo />
     </div>
     <div class="map_container">
       <Map />
@@ -13,9 +13,10 @@
 import { defineComponent } from "vue";
 import Search from "@/components/searchBar.vue";
 import Map from "@/components/map.vue";
+import IpInfo from "@/components/IpInfo.vue";
 
 export default defineComponent({
-  components: { Search, Map },
+  components: { Search, Map, IpInfo },
   setup() {
     return {};
   },
