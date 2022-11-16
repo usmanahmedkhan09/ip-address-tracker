@@ -1,6 +1,10 @@
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import axios from "axios";
 import leaflet from "leaflet";
+
+
+
+const url = 'http://ipinfo.io/json'
 
 const ipAddress = ref('')
 
@@ -10,6 +14,7 @@ const ipAddressInfo = ref<any>(null)
 export const useIpAddressTracker = () =>
 {
     let mymap: any;
+
 
     const getIpAddressInfo = async () =>
     {
@@ -35,7 +40,15 @@ export const useIpAddressTracker = () =>
         }
     };
 
-    onMounted(() =>
+    const getClientIp = () =>
+    {
+        axios.get("https://ipinfo.io?token=bd25531dad364b").then(response =>
+        {
+            ipAddress.value = response.data.ip
+        })
+    }
+
+    const setInitialData = () =>
     {
         mymap = leaflet.map("mapid").setView([51.505, -0.09], 13);
         leaflet
@@ -53,7 +66,19 @@ export const useIpAddressTracker = () =>
                 }
             )
             .addTo(mymap);
+    }
+    onMounted(() =>
+    {
+        // getClientIp()
+        // setInitialData()
+        // getIpAddressInfo()
+
     });
+
+    onUnmounted(() =>
+    {
+        mymap.invalidateSize();
+    })
 
     return {
         mymap,
