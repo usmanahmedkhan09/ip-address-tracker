@@ -8,7 +8,14 @@ import { useIpAddressTracker } from "@/composable/ip-address-tracker";
 export default defineComponent({
   components: {},
   setup() {
-    const {} = useIpAddressTracker();
+    const { getClientIp, setInitialData, getIpAddressInfo } =
+      useIpAddressTracker();
+
+    onMounted(() => {
+      getClientIp();
+      setInitialData();
+      getIpAddressInfo();
+    });
 
     return {};
   },

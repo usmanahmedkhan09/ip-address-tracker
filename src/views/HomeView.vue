@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div class="search_container">
+    <header class="search_container">
       <Search></Search>
       <IpInfo />
-    </div>
-    <div class="map_container">
+    </header>
+    <main class="map_container">
       <Map />
-    </div>
+    </main>
   </div>
 </template>
 <script lang="ts">

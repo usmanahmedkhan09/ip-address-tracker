@@ -32,7 +32,7 @@ body {
   flex-direction: column;
 
   .search_container{
-    min-height: 35%;
+    min-height: 250px;
     background-image: url('../images/pattern-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,15 +48,16 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin : 32px 0px;
+      margin : 36px 0px;
 
       .search{
-
         display: flex;
         margin-top: 24px;
+        width: 40vw;
+
         input {
           min-height: 60px;
-          width: 500px;
+          width: 100%;
           border-radius: 10px 0px 0px 10px;
           font-size: $font-xx;
           border: unset;
@@ -70,7 +71,7 @@ body {
       }
       .icon_wrapper {
         min-height: 60px;
-        min-width: 40px;
+        min-width: 35px;
         border: 1px solid black;
         display: flex;
         justify-content: center;
@@ -90,7 +91,7 @@ body {
 
   .ipInfo{
     width: 80%;
-    min-height: 180px;
+    // min-height: 180px;
     margin: 0px auto;
     background-color: white;
     border-radius: 20px;
@@ -132,4 +133,32 @@ body {
    
   }
 
+}
+
+@media screen and (max-width : 786px){
+  .container{
+    .search_wrapper{
+      .search{
+        width: 80% !important;
+      }
+    }
+    .ipInfo{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .section {
+        width: 50%;
+        text-align: center;
+        margin: 16px 0px;
+        p {
+          margin-bottom: 10px;
+        }
+      }
+
+      hr {
+        display: none;
+      }
+    }
+  }
 }
