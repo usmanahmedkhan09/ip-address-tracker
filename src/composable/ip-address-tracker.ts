@@ -32,8 +32,6 @@ export const useIpAddressTracker = () =>
                 lat: result.location.lat,
                 lng: result.location.lng,
             };
-            console.log(leaflet)
-            debugger
             leaflet.marker([ipAddressInfo.value.lat, ipAddressInfo.value.lng]).addTo(mymap);
             mymap.setView([ipAddressInfo.value.lat, ipAddressInfo.value.lng], 13);
         } catch (err: any)
